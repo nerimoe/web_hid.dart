@@ -13,14 +13,14 @@ import 'src/js_facade.dart';
 part 'src/web_hid_base.dart';
 
 @JS('navigator.hid')
-external EventTarget? get _hid;
+external Hid? get _hid;
 
 bool canUseHid() => _hid != null;
 
 Hid? _instance;
 Hid get hid {
   if (_hid != null) {
-    return _instance ??= Hid._(_hid!);
+    return _instance ??= _hid!;
   }
   throw 'navigator.hid unavailable';
 }

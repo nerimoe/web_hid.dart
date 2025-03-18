@@ -1,5 +1,6 @@
 part of '../web_hid.dart';
 
+@JS('HID')
 class Hid extends Delegate<EventTarget> {
   Hid._(super.delegate);
 
